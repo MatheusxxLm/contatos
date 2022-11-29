@@ -1,0 +1,56 @@
+﻿@model Contatos.Models.Contato
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Detalhes.css"/>
+</head>
+
+    <body>
+        <div>
+             <header class="titulo">Detalhes</header>
+        </div>
+                <div class="container">
+                    <dl class="row">
+                       
+
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(x => x.Nome)
+                            </dt>
+                            <dt class="col-sm-10">
+                                @Html.DisplayFor(x => x.Nome)
+                            </dt>
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(x => x.Telefone)
+                            </dt>
+                            <dt class="col-sm-10">
+                                @Html.DisplayFor(x => x.Telefone)
+                            </dt>
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(x => x.Email)
+                            </dt>
+                            <dt class="col-sm-10">
+                                @Html.DisplayFor(x => x.Email)
+                            </dt>
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(x => x.Ativo)
+                            </dt>
+                            <dt class="col-sm-10">
+                                @Html.DisplayFor(x => x.Ativo)
+                            </dt>
+
+                       
+
+                    </dl>
+                </div>
+    </body>
+
+<a class="salvar" asp-action="Editar" asp-route-id="@Model.Id">Editar</a>
+<a class="voltar" asp-action="Index">Voltar</a>
+</html>

@@ -1,0 +1,58 @@
+﻿@model Contatos.Models.Contato
+
+@{
+    ViewData["Title"] = "Deletar";
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/Deletar.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+    <body>
+            <header class="aviso">
+                Deseja realmente deletar este contato? essa decisão será irreversivel!
+            </header>
+
+            <div class="table">
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(x => x.Nome)
+                    </dt>
+                    <dt class="col-sm-10">
+                        @Html.DisplayFor(x => x.Nome)
+                    </dt>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(x => x.Telefone)
+                    </dt>
+                    <dt class="col-sm-10">
+                        @Html.DisplayFor(x => x.Telefone)
+                    </dt>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(x => x.Ativo)
+                    </dt>
+                    <dt class="col-sm-10">
+                        @Html.DisplayFor(x => x.Ativo)
+                    </dt>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(x => x.Email)
+                    </dt>
+                    <dt class="col-sm-10">
+                        @Html.DisplayFor(x => x.Email)
+                    </dt>
+
+
+                </dl>
+            </div>
+
+            <div class="op">
+                <form  asp-action="Deletar">
+                    <input type="submit" value="Deletar" class="deletar"/>
+                </form>
+
+                <a class="voltar" asp-action="Index">Voltar</a>
+            </div>
+    </body>
+
+</html>

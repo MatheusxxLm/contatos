@@ -1,0 +1,53 @@
+﻿@using System.Collections
+@model Contatos.Models.Contato
+
+@{
+    ViewData["Title"] = "Editar Contato";
+}
+<html>
+    <head>
+        <link  rel="stylesheet" href="~/css/editar.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    </head>
+     <body>
+
+        <h1 class="titulo"> Editar Contato</h1>
+
+      <hr/>
+
+                <div class="row">
+                    <div class="col">
+                        <form asp-action="Editar">
+                            <div class="form-group">
+                                <label asp-for="Nome" class="control-label"></label>
+                                <input asp-for="Nome" class="form-control"/>               
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Telefone" class="control-label"></label>
+                                <input type="number" asp-for="Telefone" class="form-control"/>   
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Email" class="control-label"></label>
+                                <input type="email" asp-for="Email" class="form-control"/>               
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Ativo" class="control-label"></label>
+                                <input type="checkbox" asp-for="Ativo" class="form-check-input"/>               
+                            </div>
+                            <br>
+                            <div class="opcoes">
+                                <input type="submit" value="Salvar" class="salvar" />
+                                <a class="voltar" asp-action="Index">Voltar</a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+      <hr />
+    
+
+    </body>
+
+</html>
